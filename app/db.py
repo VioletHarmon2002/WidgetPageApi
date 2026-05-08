@@ -36,6 +36,29 @@ def create_schema():
                     updated_at TIMESTAMP DEFAULT now()
                 );
             """)
+
+            #categories
+
+            default_categories = [
+                "Work",
+                "Personal",
+                "School",
+                "Shopping",
+                "Health",
+                "Sport"
+            ]
+
+            for name in default_categories:
+                cur.execute("""
+                    INSERT INTO todo_lists (category_name)
+                    SELECT %s
+                    WHERE NOT EXISTS (
+                        SELECT 1 FROM todo_lists
+                        WHERE category_name = %s
+                    )
+                """, (name, name))
+
+
             print("Schema created successfully")
 
     except Exception as e:
