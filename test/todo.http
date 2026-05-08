@@ -1,0 +1,14 @@
+@apiUrl = http://localhost:8081
+
+### Get all users
+GET {{apiUrl}}/users
+
+### Create a new product
+POST {{apiUrl}}/users
+Content-Type: application/json
+
+{
+    "username": "Max"
+    
+}
+
