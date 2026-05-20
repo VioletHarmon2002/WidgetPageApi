@@ -1,4 +1,4 @@
-# 📝 ToDo Widget API
+#  ToDo Widget API
 
 A full-stack ToDo application built with **FastAPI**, **PostgreSQL**, **Docker**, and a **vanilla JavaScript frontend widget**. This project includes a backend API, database integration, authentication with API keys, and frontend integration into a customizable start page.
 
@@ -192,6 +192,6 @@ You can:
 
 
 
-## 📄 License
+##  License
 
 This project was created for educational purposes at Arcada University of Applied Sciences.
